@@ -1,5 +1,6 @@
 package com.pluralsight.candycoded;
 
+import static android.content.Intent.ACTION_DIAL;
 import static android.content.Intent.ACTION_VIEW;
 
 import android.content.Intent;
@@ -49,8 +50,8 @@ public class InfoActivity extends AppCompatActivity {
 
     // TODO - Task 3 - Launch the Phone Activity
 
-    public void onClick(View view) {
-        startActivity(new Intent(ACTION_VIEW, Uri.parse("geo:0,0?q=618 E South St Orlando, FL 32801")));
+    public void createPhoneIntent(View view) {
+        startActivity(new Intent(ACTION_DIAL, Uri.parse("tel:0123456789")));
     }
 }
 
